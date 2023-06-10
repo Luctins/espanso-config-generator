@@ -7,7 +7,7 @@
 :END:
 
 * What this is
-Simple tool that I hacked together for generating image matches from a directory where each subdirectory is a 'category'.
+Simple tool that I hacked together for generating espanso image matches from a directory where each subdirectory is a 'category'.
 
 * How to use
 To use, just put your files under: =~/.config/espanso/images/stickers/= with subdirectoryes for each category or change the variable on the Makefile.
