@@ -33,7 +33,7 @@ clean-config:
 	mv -v $(MATCH_D)/*$(OUT_SUFFIX) $(CONF_D)/old/
 
 copy-config:
-	cp $(OUTPUT_D)/* $(MATCH_D)
+	cp $(OUTPUT_D)/* $(MATCH_D)/
 
 # ------------------------------------------------------------------------------
 # Targets
