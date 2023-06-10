@@ -1,1 +1,20 @@
-* Espanso configuration generator
+:PROPERTIES:
+#+TITLE: README
+#+AUTHOR: luctins
+#+EMAIL: contact@luctins.me
+#+DATE: 2023-06-10 15:26:01
+#+STARTUP: overview
+:END:
+
+* What this is
+Simple tool that I hacked together for generating image matches from a directory where each subdirectory is a 'category'.
+
+* How to use
+To use, just put your files under: =~/.config/espanso/images/stickers/= with subdirectoryes for each category or change the variable on the Makefile.
+
+I strongly recommend using =espanso cmd search= for expanding match, preferrably binding it to some global keyboard shortcut. it has fuzzy searching and lists the available matches by name.
+
+* =TODO=
+Not sure to be honest. It does exactly what I want for now.
+
+Ideas are welcome though.
