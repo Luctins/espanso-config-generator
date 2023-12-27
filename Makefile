@@ -1,13 +1,18 @@
 
 # source files and destination
-CONF_D = ~/.config/espanso
-SOURCE_DIR = $(CONF_D)/images/stickers
-MATCH_D = $(CONF_D)/match
+include ./paths.inc
 
+$(info SOURCE_DIR is '$(SOURCE_DIR)')
+$(info DESTINATION_DIR is '$(DESTINATION_DIR)')
+
+# $(ifeq $(SOURCE_DIR),,$(error source dir is undefined))
+# $(ifeq $(DESTINATION_DIR),, $(error destination dir is undefined))
+
+
+
+# misc
 OUTPUT_D = ./output
-
-# conventions
-OUT_SUFFIX = -images.autogen.yml
+OUT_SUFFIX = -images.yml
 
 # prerequisites generation
 DIRS := $(patsubst %/,%, $(shell cd $(SOURCE_DIR); ls -d */))
@@ -29,11 +34,11 @@ clean:
 	@-rm -v $(OUTPUT_D)/*
 
 clean-config:
-	mkdir $(MATCH_D)/old/
-	mv -v $(MATCH_D)/*$(OUT_SUFFIX) $(CONF_D)/old/
+	-rm -vr $(DESTINATION_DIR)/*
 
 copy-config:
-	cp $(OUTPUT_D)/* $(MATCH_D)/
+	@-mkdir $(DESTINATION_DIR) 2>/dev/null
+	cp $(OUTPUT_D)/* $(DESTINATION_DIR)/
 
 # ------------------------------------------------------------------------------
 # Targets
